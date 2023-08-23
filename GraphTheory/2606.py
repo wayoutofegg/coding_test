@@ -1,25 +1,26 @@
+'''Module Providing Function Printing Python version'''
 import sys
+from collections import deque
 read = sys.stdin.readline
 
-num_computers = int(read())
-num_connections = int(read())
-graph = [[] for _ in range(num_computers+1)]
-visited = [0 for _ in range(num_computers+1)]
+N = int(input())
+M = int(input())
+computers = [[] for _ in range(N+1)]
+visited = [0]*(N+1)
+for _ in range(M):
+    a, b = map(int, input().split())
+    computers[a].append(b)
+    computers[b].append(a)
 
-for _ in range(num_connections):
-    a, b = map(int, read().split())
-    graph[a].append(b)
-    graph[b].append(a)
+print(computers)
 
-global COUNT
-COUNT = 0
-
-def DFS(now_vertex):
-    global COUNT
-    for next_vertex in graph[now_vertex]:
+#DFS
+def SearchVirus(vertex, count):
+    visited[vertex] = 1
+    for next_vertex in computers[vertex]:
         if not visited[next_vertex]:
-            COUNT += 1
-            visited[next_vertex] = visited[now_vertex]
+            count += 1
+            SearchVirus(next_vertex, count)
+    return count
 
-DFS(1)
-print(COUNT)
+print(SearchVirus(1,0))
