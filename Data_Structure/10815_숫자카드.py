@@ -23,10 +23,8 @@ for i in range(M):
             left = mid+1 #mid[X]
         else:
             right = mid-1 #mid[X]
-    if found: #이거 한줄로 줄이기
-        problem[i] = 1
-    else:
-        problem[i] = 0
+    problem[i] = 1 if found else 0
+
 
 print(' '.join(str(i) for i in problem)) #!
 
