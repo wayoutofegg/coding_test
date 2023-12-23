@@ -1,3 +1,24 @@
+# 2023.12.24. Wrong
+import sys
+input = sys.stdin.readline # readline() [X]
+
+parenthesis = list(input().rstrip())
+sticks = []
+numofpieces = 0
+
+for i in range(len(parenthesis)):
+    if parenthesis[i] == '(':
+        sticks.append('(')
+    else: # ')'
+        if parenthesis[i-1] == '(': #laser ()
+            sticks.pop()
+            numofpieces += len(sticks)
+        else: # '))'
+            sticks.pop()
+            numofpieces += 1
+            
+print(numofpieces)
+
 # 2023-07-31 Data Structure 19
 
 # =============================================
@@ -6,27 +27,27 @@
 #출처: https://inuplace.tistory.com/844
 # 문제를 이해하고 훨씬 짧은 코드를 작성하려면 어떻게 할지 고민하기
 
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
 
-Parenthesis = list(input().rstrip())
-Sticks = []
-NumberOfPieces = 0
+# Parenthesis = list(input().rstrip())
+# Sticks = []
+# NumberOfPieces = 0
 
-for i in range(len(Parenthesis)):
-    # print(i, NumberOfPieces, Sticks)
-    if Parenthesis[i] == '(':
-        Sticks.append('(')
-    else: #Parenthesis[i] == ')'
-        if Parenthesis[i-1] == ')': #Stick 마지막
-            Sticks.pop()
-            NumberOfPieces += 1
-        else: #Laser
-            Sticks.pop()
-            NumberOfPieces += len(Sticks)
+# for i in range(len(Parenthesis)):
+#     # print(i, NumberOfPieces, Sticks)
+#     if Parenthesis[i] == '(':
+#         Sticks.append('(')
+#     else: #Parenthesis[i] == ')'
+#         if Parenthesis[i-1] == ')': #Stick 마지막
+#             Sticks.pop()
+#             NumberOfPieces += 1
+#         else: #Laser
+#             Sticks.pop()
+#             NumberOfPieces += len(Sticks)
 
-# print('Answer: ', end='')
-print(NumberOfPieces)
+# # print('Answer: ', end='')
+# print(NumberOfPieces)
 
 
 # ==============================================
