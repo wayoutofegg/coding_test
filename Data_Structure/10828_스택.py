@@ -1,3 +1,4 @@
+#2023.12.24. Correct
 #2023-07-30 Data Structure 02
 #1 stack 선언할 때 s = stack()으로 할 필요 없음. list로도 충분히 가능
 
