@@ -1,34 +1,17 @@
-# 2023-12-25 Correct
-# 1. Deck으로 구현하면 훨씬 쉬움
-import sys
-from collections import deque
-input = sys.stdin.readline
-
-answer = []
-N, K = map(int, input().split())
-people = deque([i for i in range(1, N+1)])
-
-for i in range(N):
-    for j in range(K-1):
-        people.append(people.popleft())
-    answer.append(people.popleft())
-
-print("<" + ', '.join([str(i) for i in answer]) + '>')
-
 #4TH TRIAL: FINAL TEST
-# n, k = map(int, input().split())
-# circle = [i for i in range(1, n+1)]
-# answer = []
+n, k = map(int, input().split())
+circle = [i for i in range(1, n+1)]
+answer = []
 
-# i = 0
-# for _ in range(n):
-#     i += k-1
-#     if i >= len(circle):
-#         i = i%len(circle)
+i = 0
+for _ in range(n):
+    i += k-1
+    if i >= len(circle):
+        i = i%len(circle)
 
-#     answer.append(str(circle.pop(i)))
+    answer.append(str(circle.pop(i)))
 
-# print('<',', '.join(answer[:]), '>', sep='')
+print('<',', '.join(answer[:]), '>', sep='')
 
 #---------------------------------------------------------------
 # import sys
