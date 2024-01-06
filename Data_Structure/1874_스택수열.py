@@ -1,3 +1,7 @@
+# 2024-01-06 FAIL
+#     lack of fundamental idea
+#     i, j, stack, answer -> if it doesn't work then just print "NO"
+
 # 3RD TRIAL: APPLICATION / 이제는 수정할 수 있어야 해 -> 별거 아니었네
 import sys
 input = sys.stdin.readline
