@@ -1,3 +1,8 @@
+# 2024-01-06 FAIL
+#     I forgot binary search algorithm
+#     mid computation should be inside of the loops, so that it can be updated every cycle
+
+
 import sys
 input = sys.stdin.readline
 
