@@ -1,3 +1,7 @@
+# 2023-01-06 FAIL
+# lack of fundamental idea
+# you should review of function "find"
+
 '''Function printing python version'''
 
 import sys
