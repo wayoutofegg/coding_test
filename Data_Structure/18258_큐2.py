@@ -1,3 +1,7 @@
+# 2024-01-06 FAIL
+#     1. you should use "deque" not a stack a.k.a. []
+#     2. you should use "del" algorithm
+
 import sys
 from collections import deque
 sys = sys.stdin.readline #2nd? -> 시간초과
