@@ -1,3 +1,4 @@
+# 2023-01-06 FAIL: stack1 & stack2
 # 2023-08-02 Data Structure 24
 
 # ========================================
@@ -35,31 +36,31 @@ print(''.join(stack1))
 #0 아이디어: Cursor 없이 stack 2개로 구현
 #1 복붙 에러 해결: tab 모두 제거하고 스페이스바 띄어쓰기로 통일
 #출처: 
-import sys
+# import sys
 
-st1 = list(sys.stdin.readline().rstrip())
-st2 = []
-# Cursor variable X
+# st1 = list(sys.stdin.readline().rstrip())
+# st2 = []
+# # Cursor variable X
 
-for _ in range(int(sys.stdin.readline())):
-    command = list(sys.stdin.readline().split())
-    if command[0] == 'L':
-        if st1:
-            st2.append(st1.pop())
+# for _ in range(int(sys.stdin.readline())):
+#     command = list(sys.stdin.readline().split())
+#     if command[0] == 'L':
+#         if st1:
+#             st2.append(st1.pop())
 
-    elif command[0] == 'D':
-        if st2:
-            st1.append(st2.pop())
+#     elif command[0] == 'D':
+#         if st2:
+#             st1.append(st2.pop())
             
-    elif command[0] == 'B':
-        if st1:
-            st1.pop()
+#     elif command[0] == 'B':
+#         if st1:
+#             st1.pop()
             
-    else: # P
-    	st1.append(command[1])
+#     else: # P
+#     	st1.append(command[1])
         
-st1.extend(reversed(st2))
-print(''.join(st1))
+# st1.extend(reversed(st2))
+# print(''.join(st1))
 
 
 # =======================================
