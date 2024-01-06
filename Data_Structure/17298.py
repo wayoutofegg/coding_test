@@ -1,3 +1,7 @@
+# 2024-01-06 FAIL
+#     lack of fundamental idea
+#     stack and while
+
 '''This code only runs in python'''
 import sys
 read = sys.stdin.readline
