@@ -1,3 +1,45 @@
+# 2024-01-07 FAIL
+#     말렸어. 이따가 다시 확인하자
+
+import sys
+input = sys.stdin.readline
+
+answer = "no"
+
+def AnswerMe(sentence):    
+    brackets = []
+    open_brackets = []
+    for letter in sentence:
+        if letter in '([])':
+            brackets.append(letter)
+            
+    for bracket in brackets:
+        if bracket in '[(':
+            open_brackets.append(bracket)
+        else:
+            if open_brackets and bracket == ']':
+                if open_brackets[-1] == '[':
+                    open_brackets.pop()
+            elif open_brackets and bracket == ')':
+                if open_brackets[-1] == '(':
+                    open_brackets.pop()
+            else:
+                return "no"
+                
+    if not open_brackets:
+        return "yes"
+    return "no"
+        
+while True:
+    sentence = input().rstrip()
+    if sentence == '.':
+        break
+    else:
+        sentence = list(sentence)
+        print(AnswerMe(sentence))
+
+
+
 # 2023-07-31 Data Structure 14
 
 import sys
