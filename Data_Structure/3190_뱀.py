@@ -1,7 +1,8 @@
 # 2023-01-06 FAIL
 #     the algorithm sequence is important
 
-Here it is, simpler code
+# Here it is, simpler code
+
 import sys
 input = sys.stdin.readline
 from collections import deque
