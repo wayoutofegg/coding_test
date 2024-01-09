@@ -1,3 +1,6 @@
+# 2024-01-09 PASS
+# 1. 나이 같으면 가입한 순으로 출력 = 조건은 나이 하나만 설정해라
+
 import sys
 input = sys.stdin.readline
 
