@@ -1,3 +1,5 @@
+# 2024-01-10 PASS
+
 n = int(input())
 times = list(map(int, input().split()))
 times.sort()
